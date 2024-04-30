@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="{{ 'output.css' | asset_url }}" />
+
+<section id="section_app" class="w-full flex justify-center items-center ">
+    <div class="flex justify-center items-center text-gray-900 " id="dynamic_announcement_text">
+      <p id="text_color" class={{ block.settings.animation }}>
+        {{ block.settings.dynamic_announcement_text }}
+      </p>
+    </div>
+</section>
+
+
+<style>
+  #section_app{
+    padding-top :{{ block.settings.bar_height }}px;
+    padding-bottom :{{ block.settings.bar_height }}px;
+    background:{{ block.settings.section_app}};
+  }
+  #text_color {
+  color: {{ block.settings.text_color }};
+  font-size : {{ block.settings.font_size}}px;
+  }
+</style>
+
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "target": "section",
+  "settings": [
+    { 
+      "type": "color",
+      "id": "section_app",
+      "label": "Background Color",
+      "default": "#000000" 
+    },
+    {
+      "type": "range",
+      "id": "bar_height",
+      "label": "Height",
+      "min": 4,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    { "type": "text",
+      "id": "dynamic_announcement_text",
+      "label": "Announcement Text",
+      "default": "🚚 Free Shipping" ,
+      "info" : "You can add more offers via the app admin!"
+    },
+    { "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#D3D3D3" 
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size",
+      "min": 4,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+
+    {
+      "type": "select",
+      "id": "animation",
+      "label": "Animation Type",
+      "options": [
+        {
+          "value": "animate-blink",
+          "label": "blink"
+        },
+        {
+          "value": "animate-bounce",
+          "label": "bounce"
+        },
+        {
+          "value": "animate-ping",
+          "label": "ping"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
