@@ -3,7 +3,7 @@
 client_id = "802c9bd661ba0c3e74cb7ff499b7f3b6"
 name = "simolearn2"
 handle = "simolearn2"
-application_url = "https://murphy-constitutional-celebs-conspiracy.trycloudflare.com"
+application_url = "https://hill-latin-temperature-animals.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://murphy-constitutional-celebs-conspiracy.trycloudflare.com/auth/callback",
-  "https://murphy-constitutional-celebs-conspiracy.trycloudflare.com/auth/shopify/callback",
-  "https://murphy-constitutional-celebs-conspiracy.trycloudflare.com/api/auth/callback"
+  "https://hill-latin-temperature-animals.trycloudflare.com/auth/callback",
+  "https://hill-latin-temperature-animals.trycloudflare.com/auth/shopify/callback",
+  "https://hill-latin-temperature-animals.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

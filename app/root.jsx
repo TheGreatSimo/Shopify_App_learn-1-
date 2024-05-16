@@ -21,6 +21,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <h1>hello world</h1>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
